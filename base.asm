@@ -12,6 +12,7 @@ global keyboard_handler
 global read_port
 global write_port
 global load_idt
+global gdt_flush
 
 extern keyboard_handler_main
 section .text
@@ -89,3 +90,17 @@ load_idt:
 keyboard_handler:                 
     call    keyboard_handler_main
     iretd
+
+gdt_flush:
+    mov eax, [esp+4]
+    lgdt [eax]
+    mov ax,0x10
+    mov ds, ax
+    mov es, ax
+    mov fs, ax
+    mov gs, ax
+    mov ss, ax
+    jmp 0x08:.flush
+
+.flush:
+   ret

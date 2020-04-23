@@ -19,9 +19,9 @@ void kmain(void)
 {
     //设置分辨率，暂时没弄好
     set_ratio();
+    init_gdt();
     idt_init();
     //初始化段表会有问题，暂时不管了
-    //init_gdt();
 	const char *str = "my first kernel";
 	/* video memory begins at address 0xb8000 */
 	//char *vidptr = (char*)0xb8000;

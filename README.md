@@ -6,9 +6,6 @@ This is a minimalist kernel which prints "`my first kernel`" on the screen and t
 * The kernel is multi-boot compliant and loads with GRUB.
 
 
-#### Blog post ####
-
-[Kernel 101 – Let’s write a Kernel](http://arjunsreedharan.org/post/82710718100/kernel-101-lets-write-a-kernel)
 
 #### Build commands ####
 ```
@@ -45,9 +42,3 @@ Configure your grub/grub2 similar to what is given in `_grub_grub2_config` folde
 
 Reboot.
 
-Voila!
-
-![kernel screenshot](http://static.tumblr.com/gltvynn/yOdn443dr/mkernel.png "Screenshot")
-
-#### The next step ####
-See [mkeykernel repo](//github.com/arjun024/mkeykernel)
